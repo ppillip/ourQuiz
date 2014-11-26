@@ -1,0 +1,38 @@
+
+<template name="userList">
+
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">{{listName}}</div>
+        <div class="panel-heading">{{listName2 '안녕' '또안녕'}}</div>
+
+        <!-- Table -->
+        <table class="table table-condensed table-striped table-bordered table-hover">
+            <tbody>
+            {{#each list}}
+                {{>userListItem}}
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+</template>
+
+
+<template name="userListItem">
+    <tr>
+        <td>{{this.no}}</td>
+        <td>{{this.name}}</td>
+        <td>{{this.email}}</td>
+        <td>
+            <button type="button" class="btn btn-default btn-small">
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
+            </button>
+        </td>
+    </tr>
+</template>
+
+
+
+
+
